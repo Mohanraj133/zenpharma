@@ -102,7 +102,7 @@ jobs:
         uses: actions/upload-artifact@v6
         with:
           name: tfplan
-          path: envs/dev/tfplan
+          path: infra/envs/dev/tfplan
           retention-days: 1
 
   # ── Apply ─────────────────────────────────────────────────────────────────
@@ -140,7 +140,7 @@ jobs:
         uses: actions/download-artifact@v7
         with:
           name: tfplan
-          path: envs/dev
+          path: infra/envs/dev
 
       - name: Terraform Apply
         run: |
